@@ -1,0 +1,8 @@
+这个网址指导如何安装mongoDB
+https://docs.mongodb.com/manual/tutorial/manage-mongodb-processes/
+
+初始化安装好的mongoDB
+1. 切换到初始化程序databaseInitialize所在目录
+cd /opt/ibeo/evaluationsuiteserver/
+2. 用localhost进行初始化
+oubaituo@ubuntu:/opt/ibeo/evaluationsuiteserver$ ./databaseInitialize --db_address localhost
