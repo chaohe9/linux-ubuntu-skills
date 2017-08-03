@@ -1,0 +1,13 @@
+关于在ubuntu中配置环境变量或是库引用我用的最简单的办法就是修改/etc/ld.so.conf，因为我发现用whereis lib进行查找以后，只有这个lib路径是默认的
+如果其他电脑有/lib或者/usr/lib的路径那也可以修改他们。
+
+修改过程：
+1. 转换到root用户
+   ~$ sudo -s
+   ~$ cat /etc/ld.so.conf
+   然后会显示文件里的内容
+   添加需要的路径
+   ~$ echo "..." >> /etc/ld.so.conf
+   ~$ ldconfig
+   最后恢复当前权限
+   ~$ sudo su usrname
